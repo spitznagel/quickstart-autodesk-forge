@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "KeyPairName",
+        "ParameterValue": "YOUR_KEY_PAIR"
+    },
+    {
+        "ParameterKey":"OperatorEmail",
+        "ParameterValue": "YOUR_EMAIL"
+    },
+    {
+        "ParameterKey": "ForgeClientId",
+        "ParameterValue": "YOUR_FORGE_CLIENT_ID"
+    },
+    {
+        "ParameterKey": "ForgeClientSecret",
+        "ParameterValue": "YOUR_FORGE_CLIENT_SECRET"
+    },
+    {
+        "ParameterKey":"ForgeApplicationRuntime",
+        "ParameterValue": "Node.js"
+    }
+]

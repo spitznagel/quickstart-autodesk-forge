@@ -1,0 +1,67 @@
+[
+    {
+        "ParameterValue": "us-west-2a,us-west-2b",
+        "ParameterKey": "AvailabilityZones"
+    },
+    {
+        "ParameterValue": "Amazon-Linux-HVM",
+        "ParameterKey": "BastionAMIOS"
+    },
+    {
+        "ParameterValue": "t2.micro",
+        "ParameterKey": "BastionInstanceType"
+    },
+    {
+        "ParameterValue": "YOUR_KEY_PAIR",
+        "ParameterKey": "KeyPairName"
+    },
+    {
+        "ParameterValue": "YOUR_EMAIL",
+        "ParameterKey": "OperatorEmail"
+    },
+    {
+        "ParameterKey": "ForgeClientId",
+        "ParameterValue": "YOUR_FORGE_CLIENT_ID"
+    },
+    {
+        "ParameterKey": "ForgeClientSecret",
+        "ParameterValue": "YOUR_FORGE_CLIENT_SECRET"
+    },
+    {
+        "ParameterValue": "aws-cfn-samples",
+        "ParameterKey": "QSS3BucketName"
+    },
+    {
+        "ParameterValue": "quickstart-autodesk-forge/",
+        "ParameterKey": "QSS3KeyPrefix"
+    },
+    {
+        "ParameterValue": "YOUR_IP_ADDRESS",
+        "ParameterKey": "RemoteAccessCIDR"
+    },
+    {
+        "ParameterValue": "10.0.0.0/16",
+        "ParameterKey": "VPCCIDR"
+    },
+    {
+        "ParameterValue": "t3.large",
+        "ParameterKey": "ForgeNodeInstanceType"
+    },
+    {
+        "ParameterValue": "1",
+        "ParameterKey": "ForgeNodesDesiredCapacity"
+    },
+    {
+        "ParameterValue": "4",
+        "ParameterKey": "ForgeNodesMaxSize"
+    },
+    {
+        "ParameterValue": "1",
+        "ParameterKey": "ForgeNodesMinSize"
+    },
+    {
+        "ParameterValue": "Node.js",
+        "ParameterKey": "ForgeApplicationRuntime"
+    }
+]
+    

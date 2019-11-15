@@ -1,0 +1,21 @@
+{
+  "Parameters": {
+    "AvailabilityZones": "us-west-2a,us-west-2b",
+    "BastionAMIOS": "Amazon-Linux-HVM",
+    "BastionInstanceType": "t2.micro",
+    "KeyPairName": "YOUR_KEY_PAIR",
+    "OperatorEmail": "YOUR_EMAIL",
+    "ForgeClientId": "YOUR_FORGE_CLIENT_ID",
+    "ForgeClientSecret": "YOUR_FORGE_CLIENT_SECRET",
+    "QSS3BucketName": "YOUR_CODE_HOSTING_BUCKET",
+    "QSS3KeyPrefix": "quickstart-autodesk-forge/",
+    "RemoteAccessCIDR": "YOUR_IP_ADDRESS",
+    "VPCCIDR": "10.0.0.0/16",
+    "ForgeNodeInstanceType": "t3.large",
+    "ForgeNodesDesiredCapacity": "1",
+    "ForgeNodesMaxSize": "4",
+    "ForgeNodesMinSize": "1",
+    "ForgeApplicationRuntime": "Node.js"
+  }
+}
+
