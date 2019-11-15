@@ -4,7 +4,7 @@
 
 2. Go to AWS console using the **AWS Console** link in your Event Engine dashboard.
 
-3. In the Services, search for Cloud9 and go to Cloud9 console. You will find a Cloud9 IDE pre-provisioned with the name that looks starts with `forge-workshop-`. Choose **Open IDE**.
+3. In the Services, search for Cloud9 and go to Cloud9 console. You will find a Cloud9 IDE pre-provisioned with the name that starts with `forge-workshop-`. Choose **Open IDE**.
 
 4. Create [GitHub token](http://workshop.quickstart.awspartner.com/10_prerequisites/30_github_token.html).
 
