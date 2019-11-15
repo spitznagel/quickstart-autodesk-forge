@@ -55,7 +55,7 @@ CloudFormation templates and scripts. We also create a `forge-demo` key pair in 
 
     `export CONFIG_BUCKET=$(cat config-bucket.txt)`
 
-11. Open update_artifacts.sh and fill lines 1-4 as follows. 
+11. Open update_artifacts.sh and fill lines 1-4 as follows. Be sure to not add any spaces after the properties: `EMAIL`, `FORGE_CLIENT_ID`, etc.
    
     Property | Value
     ---------|------
@@ -71,11 +71,11 @@ CloudFormation templates and scripts. We also create a `forge-demo` key pair in 
 13. Let's verify the substituted tokens in `forge-prod-cfn.json`, `forge-prod-codepipeline.json`, and `taskcat_project_override.json`.
 
 # Deploy the Quick Start with default app
-14. Deploy the Quick Start with the default Forge application by running the command below.
+14. Deploy the Quick Start with the default Forge application by running the command below. This will create a new CloudFormation stack in your account with the name: `Forge-Prod-Stack`.
 
     `bash run_cfn.sh`
     
-15. This step will take approximately 15 minutes, we'll come back and verify that our base application has deployed correctly. Test your application going to the link provided by the value of `ForgeAppURL` in CloudFormation outputs section of the `Forge-Prod-Stack`.
+15. This step will take approximately 15 minutes, we'll come back and verify that our base application has deployed correctly. To test your application, go to the CloudFormation console and choose the `Forge-Prod-Stack`. In the Outputs section, go to the link provided as the value of `ForgeAppURL`.
     
 # Setting up continuous deployment
    
@@ -84,7 +84,7 @@ CloudFormation templates and scripts. We also create a `forge-demo` key pair in 
     2. Checkout develop branch: `git checkout develop`
     3. open `quickstart-autodesk-forge/templates/autodesk-forge-nodejs.json`. Change `FORGE_APP_NAME` in line 147 to `forge-viewmodels-nodejs-aws-dashboard`. Save the file.
     4. open `quickstart-autodesk-forge/templates/autodesk-forge.json`. Change `Toggle` value in line 801 from "false" to "true". Save the file.
-    5. In terminal, from the quickstart-autodesk-forge directory, add the files, commit and push.
+    5. In terminal, from the quickstart-autodesk-forge directory, add the files, commit and push. When asked for a password, use your GitHub personal access token created in Step 4.
            
           ```
             git add -A
@@ -98,7 +98,7 @@ CloudFormation templates and scripts. We also create a `forge-demo` key pair in 
     aws s3 cp quickstart-autodesk-forge.zip s3://$CONFIG_BUCKET/
     aws s3 cp taskcat_project_override.json s3://$CONFIG_BUCKET/
     ```
-18. In a new tab, open the following [launch stack link](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?stackName=Forge-App-CICD&templateURL=https://aws-cfn-samples.s3.amazonaws.com/quickstart-taskcat-ci/templates/taskcat-cicd-pipeline.template.yaml&param_ProdStackName=Forge-Prod-Stack&param_ProdStackConfig=forge-prod-codepipeline.json&param_TemplateFileName=autodesk-forge-master.json&param_TestStackConfig=taskcat_project_override.json&param_SourceRepoBranch=develop&param_ReleaseBranch=master&param_QSS3KeyPrefix=quickstart-taskcat-ci/&param_QSS3BucketName=aws-cfn-samples&param_GitHubRepoName=quickstart-autodesk-forge&param_KeepTestStack=True) that will setup your CodePipeline. Most fields are populated with defaults, fill in only the blank fields.
+18. In a new browser tab, open the following [launch stack link](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?stackName=Forge-App-CICD&templateURL=https://aws-cfn-samples.s3.amazonaws.com/quickstart-taskcat-ci/templates/taskcat-cicd-pipeline.template.yaml&param_ProdStackName=Forge-Prod-Stack&param_ProdStackConfig=forge-prod-codepipeline.json&param_TemplateFileName=autodesk-forge-master.json&param_TestStackConfig=taskcat_project_override.json&param_SourceRepoBranch=develop&param_ReleaseBranch=master&param_QSS3KeyPrefix=quickstart-taskcat-ci/&param_QSS3BucketName=aws-cfn-samples&param_GitHubRepoName=quickstart-autodesk-forge&param_KeepTestStack=True) that will setup your CodePipeline. Most fields are populated with defaults, fill in only the blank fields.
 
     * Repository owner: your GitHub user name
     * OAuth2 token: your GitHub oauth token created in Step 4
